@@ -33,7 +33,7 @@
     total={165mm,252mm},
     margin=1in,
 	left=25mm,
-    top=90pt,
+    top=95pt,
 }
 \usepackage{ifxetex}                        % detect "xelatex" compilation enginge
 \usepackage{ifthen}                         % make use of "if", "then"
@@ -48,6 +48,8 @@
 \usepackage[typewriter, full]{complexity}   % complexity environment
 \usepackage{color}                          % view the world/document in color!
 \usepackage{listings}                       % codeblocks, etc.
+\usepackage{tocloft}                        % table of content
+\usepackage[bookmarksnumbered]{hyperref}    % enable links in the document
 
 
 % choose font interpreter based on compilation enginge (xelatex is better)
@@ -172,13 +174,16 @@
 
 
 % macros
-\newcommand{\leer}{\,}          % nicer "space"
-\newcommand{\aufgabe}[2]{\section*{Aufgabe \sheetnumber.#1 {- #2}}}
+\renewcommand\thesection{Aufgabe \sheetnumber.\arabic{section} - \hspace{-1em}}		% section: in-line:	custom enumeration title (Top # - ) with correct spacing
+\newcommand{\aufgabe}[1]{
+    \pagebreak
+    \section{#1}
+}
 \newcommand{\apt}[2]{\subsection*{#1){\hspace{2mm} #2}}}
 \newcommand{\appt}[2]{\subsubsection*{#1){\hspace{2mm} #2}}}
 \newcommand{\todo}{\textbf{\textcolor{red}{TODO}}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
-% si shit
+%% si shit
 \newcommand{\RTT}{\text{RTT}}
 \newcommand{\Gbps}{\ensuremath{\leer\si{\giga\bit\per\second}}}
 \newcommand{\GBps}{\ensuremath{\leer\si{\giga\byte\per\second}}}
@@ -202,3 +207,8 @@
 \newcommand{\sins}{\ensuremath{\leer\si{\nano\second}}}
 \newcommand{\sime}{\ensuremath{\leer\si{\meter}}}
 \newcommand{\simps}{\ensuremath{\leer\si{\meter\per\second}}}
+%% other
+\newcommand{\ip}[1]{\texttt{#1}}
+\newcommand{\packet}[1]{\texttt{#1}}
+\newcommand{\mathtext}[1]{\ensuremath{\leer\text{#1}}}
+\newcommand{\leer}{\,}
