@@ -73,10 +73,18 @@
 \usepackage{lmodern}
 \fi
 
+% use package "enumitem" for better itemize styling
+\usepackage{enumitem}
+\setlist[itemize]{
+    nolistsep,          % do not add vertical white space before/after items
+    leftmargin = 2em,   % spacing between item text and the left text-border
+    itemsep = 0.1em,    % vertical space between two items
+}
 
 % make nicer paragraphs (no indent, line seperation)
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{3pt}
+
 
 % variables
 %% "modulename" variable, e.g. "Datenkommunikation und Sicherheit - SS2020"
@@ -173,8 +181,9 @@
 \cfoot {\thepage}               % position page numberung at center bottom of all pages
 
 
+% renew commands
+\renewcommand\thesection{Aufgabe \sheetnumber.\arabic{section} - \hspace{-1em}}		% section: custom enumeration title (Aufgabe #1 - #1) with correct spacing
 % macros
-\renewcommand\thesection{Aufgabe \sheetnumber.\arabic{section} - \hspace{-1em}}		% section: in-line:	custom enumeration title (Top # - ) with correct spacing
 \newcommand{\aufgabe}[1]{
     \pagebreak
     \section{#1}
