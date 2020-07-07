@@ -30,10 +30,10 @@
 \usepackage{geometry}
 \geometry{
 	a4paper,
-    total={165mm,252mm},
-    margin=1in,
-	left=25mm,
-    top=95pt,
+    total = {165mm,252mm},
+    margin = 1in,
+	left = 25mm,
+    top = 95pt,
 }
 \usepackage{ifxetex}                        % detect "xelatex" compilation enginge
 \usepackage{ifthen}                         % make use of "if", "then"
@@ -50,6 +50,7 @@
 \usepackage{listings}                       % codeblocks, etc.
 \usepackage{tocloft}                        % table of content
 \usepackage[bookmarksnumbered]{hyperref}    % enable links in the document
+\usepackage[binary-units=true,per-mode=symbol]{siunitx}  % nice typesetting for SI units
 
 
 % choose font interpreter based on compilation enginge (xelatex is better)
