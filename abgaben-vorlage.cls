@@ -183,13 +183,14 @@
 
 
 % renew commands
-\renewcommand\thesection{Aufgabe \sheetnumber.\arabic{section} - \hspace{-1em}}		% section: custom enumeration title (Aufgabe #1 - #1) with correct spacing
+\renewcommand{\thesection}{Aufgabe \sheetnumber.\arabic{section} - \hspace{-1em}}		% section: custom enumeration title (Aufgabe #1 - #1) with correct spacing
+\renewcommand{\thesubsection}{\alph{subsection})\hspace{-2mm}}                          % subsection: alpha enumeration
 % macros
 \newcommand{\aufgabe}[1]{
     \pagebreak
     \section{#1}
 }
-\newcommand{\apt}[2]{\subsection*{#1){\hspace{2mm} #2}}}
+\newcommand{\apt}[1]{\subsection{#1}}
 \newcommand{\appt}[2]{\subsubsection*{#1){\hspace{2mm} #2}}}
 \newcommand{\todo}{\textbf{\textcolor{red}{TODO}}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
