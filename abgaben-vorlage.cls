@@ -183,6 +183,7 @@
 
 
 % renew commands
+\renewcommand{\phi}{\varphi}    % use nice version of phi for "\phi"
 \renewcommand{\thesection}{Aufgabe \sheetnumber.\arabic{section} - \hspace{-1em}}		% section: custom enumeration title (Aufgabe #1 - #1) with correct spacing
 \renewcommand{\thesubsection}{\alph{subsection})\hspace{-2mm}}                          % subsection: alpha enumeration
 % macros
